@@ -1,11 +1,12 @@
-
-
 from flask import Flask, render_template, request
 from wtforms import Form, TextAreaField, validators
 import pickle
 import sqlite3
 import os
 import numpy as np
+
+# import update function from local dir
+from update import update_model
 
 # import HashingVectorizer from local dir
 from vectorizer import vect
@@ -71,5 +72,7 @@ def feedback():
 	sqlite_entry(db, review, y)
 	return render_template('thanks.html')
 
+
 if __name__ == '__main__':
-	app.run(debug=True)
+	update_model(db_path=db, model=clf, batch_size=10000)
+	app.run(debug=False, host='0.0.0.0', port=5077)
