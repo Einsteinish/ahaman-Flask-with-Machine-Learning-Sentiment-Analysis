@@ -18,9 +18,16 @@
 
     ga('create', '{{ google_analytics_id }}', 'ahaman.com');
     ga('send', 'pageview');
-
   </script>
   {% endif %}
+  <!-- Google Plus - place this tag after the last widget tag. -->
+  <script type="text/javascript">
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/platform.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+  </script>
 </head>
 <body class="{% block body_class %}{% endblock %}">
   <div class="container">
