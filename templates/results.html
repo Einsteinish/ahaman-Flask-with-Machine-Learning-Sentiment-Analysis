@@ -1,13 +1,8 @@
-<!doctype html>
-<html>
+{% extends '/base.html' %}
 
-<head>
-	<title>Movie Classification</title>
-	<link rel="stylesheet" href="{{ url_for('static',
-		filename='style.css') }}">
-</head>
+{% block body_class %}main main-index{% endblock %}
 
-<body>
+{% block layout %}
 	<h3>Your movie review:</h3>
 
 	<div>{{ content }}</div>
@@ -30,6 +25,4 @@
 			<input type=submit value='Submit another review'>
 		</form>
 	</div>
-</body>
-
-</html>
+{% endblock %}

@@ -1,0 +1,35 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Aha Man {{ page_title }}</title>
+  <meta name="description" content="Flask with Machine Learning : Sentiment Analysis for moview reviews">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="{{ url_for('static',
+    filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',
+    filename='css/bootstrap.min.css') }}">
+  {% if google_analytics_id %}
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '{{ google_analytics_id }}', 'ahaman.com');
+    ga('send', 'pageview');
+
+  </script>
+  {% endif %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  <div class="container">
+    {% include "_nav.html" %}
+    {% block layout %}{% endblock -%}
+    <footer class="footer">
+      <p>Copyright &copy; 2016 by K Hong</p>
+      <p>This site uses <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>. You can also <a href="http://www.github.com/Einsteinish/ahaman-Flask-with-Machine-Learning-Sentiment-Analysis">view the source code.</a></p>
+    </footer>
+  </div>
+</body>
+</html>

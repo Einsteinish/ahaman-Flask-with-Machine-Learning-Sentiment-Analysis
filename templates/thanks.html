@@ -1,17 +1,12 @@
-<!doctype html>
-<html>
+{% extends '/base.html' %}
 
-<head>
-	<title>Movie Classification</title>
-</head>
+{% block body_class %}main main-index{% endblock %}
 
-<body>
+{% block layout %}
 	<h3>Thank you for your feedback!</h3>
 	<div id='button'>
 		<form action="/">
 			<input type=submit value='Submit another review'>
 		</form>
 	</div>
-</body>
-
-</html>
+{% endblock %}

@@ -45,7 +45,7 @@ class ReviewForm(Form):
 @app.route('/')
 def index():
 	form = ReviewForm(request.form)
-	return render_template('reviewform.html', form=form)
+	return render_template('index.html', form=form)
 
 @app.route('/results', methods=['POST'])
 def results():
@@ -57,7 +57,7 @@ def results():
 	content=review,
 	prediction=y,
 	probability=round(proba*100, 2))
-	return render_template('reviewform.html', form=form)
+	return render_template('index.html', form=form)
 
 @app.route('/thanks', methods=['POST'])
 def feedback():
@@ -75,4 +75,4 @@ def feedback():
 
 if __name__ == '__main__':
 	update_model(db_path=db, model=clf, batch_size=10000)
-	app.run(debug=False, host='0.0.0.0', port=5077)
+	app.run(debug=True, host='0.0.0.0', port=5077)
