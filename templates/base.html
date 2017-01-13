@@ -32,7 +32,9 @@
 <body class="{% block body_class %}{% endblock %}">
   <div class="container">
     {% include "_nav.html" %}
+    {% include "_adsense.html" %}
     {% block layout %}{% endblock -%}
+    {% include "_adsense.html" %}
     <footer class="footer">
       <p>Copyright &copy; 2016 by K Hong</p>
       <p>This site uses <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>. You can also <a href="http://www.github.com/Einsteinish/ahaman-Flask-with-Machine-Learning-Sentiment-Analysis">view the source code.</a></p>
