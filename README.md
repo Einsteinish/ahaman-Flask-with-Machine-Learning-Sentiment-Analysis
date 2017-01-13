@@ -22,4 +22,4 @@ Tutorials
 
 Note
 ---------
-[ahaman.com](http://www.ahaman.com) - Check out production branch for the final look of the site (new css)
+[ahaman.com](http://www.ahaman.com) - Check out production branch for the final look of the site
